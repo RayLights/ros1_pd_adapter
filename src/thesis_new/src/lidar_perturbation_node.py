@@ -32,7 +32,22 @@ class LidarPerturberNode:
     #lidar_mc_simulate_fog, slow
     #lidar_mc_simulate_snow, slow
     #lidar_mc_simulate_snow_sweep, work
-        self.perturbation_name = "lidar_mc_simulate_snow_sweep"
+    #pts_motion,
+    #transform_points,
+    #reduce_LiDAR_beamsV2,
+    #pointsreducing,
+    #simulate_snow_sweep, # ransac for ground truth
+    #simulate_snow, # needs ground truth labels
+    #simulate_fog,
+    PERTURBATION_NAMES = ["pts_motion",
+    "transform_points",
+    "reduce_LiDAR_beamsV2",
+    "pointsreducing",
+    "simulate_snow_sweep", # ransac for ground truth
+    #simulate_snow, # needs ground truth labels
+    "simulate_fog",
+    ]
+        self.perturbation_name = "reduce_LiDAR_beamsV2"
         
         # Set intensity (0 to 4 usually)
         self.intensity = 2
